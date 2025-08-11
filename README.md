@@ -9,6 +9,8 @@ Tool to simplify the tedious task of making materials for Workers & Resources: S
 3. Set your preferences for export, such as rbga (a is not alpha for WRSR *sigh*) values for diffuse, specular and ambient; relative texture path you'd like to have in your material (useful if you have shared folders or subfolders) and export path for your mtl file.
 4. Select all meshes you would like to generate mtl file for.
 5. Click "Export W&R MTL". The resulted file will look like your normal mtl material file.
+<img width="488" height="447" alt="image" src="https://github.com/user-attachments/assets/3e2c6a51-72da-4d9b-8037-c7b2ae55a71f" />
+
 
 # Texture Slot Assignment (Blender - W&R MTL):
 1. Diffuse - Base Color.
