@@ -3,8 +3,8 @@ bl_info = {
     "author": "Lex713",
     "version": (1, 0),
     "blender": (4, 0, 0),
-    "location": "View3D > Sidebar > Misc Tab",
-    "description": "Select mesh objects you want and make an mtl material file for Workers & Resources: Soviet Republic",
+    "location": "View3D > Sidebar > WRSR",
+    "description": "Automates creation of mtl material file for Workers & Resources: Soviet Republic",
     "category": "Import-Export",
 }
 
@@ -34,14 +34,17 @@ class WRSettings(bpy.types.PropertyGroup):
     export_path: bpy.props.StringProperty(
         name="Export Path", subtype="FILE_PATH"
     )
-
+    
+# ---------------------------
 # ---------- PANEL ----------
+# ---------------------------
+
 class WRPanel(bpy.types.Panel):
-    bl_label = "W&R MTL Export"
+    bl_label = "MTL Editor"
     bl_idname = "VIEW3D_PT_wr_mtl_export"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'Misc'
+    bl_category = 'WRSR'
 
     def draw(self, context):
         layout = self.layout
@@ -55,7 +58,9 @@ class WRPanel(bpy.types.Panel):
         layout.prop(settings, "export_path")
         layout.operator("export_scene.wr_mtl")
 
-# ---------- OPERATOR ----------
+# ---------------------------
+# -------- OPERATOR ---------
+# ---------------------------
 class EXPORT_OT_wr_mtl(bpy.types.Operator):
     bl_label = "Export W&R MTL"
     bl_idname = "export_scene.wr_mtl"
@@ -113,8 +118,11 @@ class EXPORT_OT_wr_mtl(bpy.types.Operator):
 
         self.report({'INFO'}, f"Exported {len(objs)} objects' materials.")
         return {'FINISHED'}
+        
+# ---------------------------
+# -------- REGISTER ---------
+# ---------------------------
 
-# ---------- REGISTER ----------
 def register():
     bpy.utils.register_class(WRSettings)
     bpy.types.Scene.wr_settings = bpy.props.PointerProperty(type=WRSettings)
