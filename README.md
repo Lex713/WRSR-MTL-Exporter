@@ -3,8 +3,8 @@ Tool to simplify the tedious task of making materials for Workers & Resources: S
 
 # How to use:
 1. Install as normal addon.
-2. In your viewport, go to sidebar, misc tab. Here you will find new menu called "W&R MTL Export" that looks like this:
-<img width="305" height="207" alt="image" src="https://github.com/user-attachments/assets/bdb97c03-9feb-4d99-8431-7bf41a89c023" />
+2. In your viewport, go to sidebar, WRSR tab. Here you will find new menu called "MTL Editor" that looks like this:
+<img width="332" height="206" alt="image" src="https://github.com/user-attachments/assets/01ec7f66-6db4-4226-979e-50e3ee4ab342" />
 
 3. Set your preferences for export, such as rbga (a is not alpha for WRSR *sigh*) values for diffuse, specular and ambient; relative texture path you'd like to have in your material (useful if you have shared folders or subfolders) and export path for your mtl file.
 4. Select all meshes you would like to generate mtl file for.
